@@ -474,7 +474,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task1.setFont(font)
-        self.task1.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task1.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task1.setText("")
@@ -486,7 +486,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task2.setFont(font)
-        self.task2.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task2.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task2.setText("")
@@ -498,7 +498,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task4.setFont(font)
-        self.task4.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task4.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task4.setText("")
@@ -510,7 +510,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task3.setFont(font)
-        self.task3.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task3.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task3.setText("")
@@ -522,7 +522,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task6.setFont(font)
-        self.task6.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task6.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task6.setText("")
@@ -534,7 +534,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task8.setFont(font)
-        self.task8.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task8.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task8.setText("")
@@ -546,7 +546,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task7.setFont(font)
-        self.task7.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task7.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task7.setText("")
@@ -558,7 +558,7 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task5.setFont(font)
-        self.task5.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+        self.task5.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
 "color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task5.setText("")
@@ -572,7 +572,7 @@ class Ui_MainWindow(object):
         self.sub1.setFont(font)
         self.sub1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub1.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub1.setIconSize(QtCore.QSize(36, 37))
         self.sub1.setObjectName("sub1")
@@ -584,7 +584,7 @@ class Ui_MainWindow(object):
         self.sub2.setFont(font)
         self.sub2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub2.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub2.setIconSize(QtCore.QSize(36, 37))
         self.sub2.setObjectName("sub2")
@@ -596,7 +596,7 @@ class Ui_MainWindow(object):
         self.sub4.setFont(font)
         self.sub4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub4.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub4.setIconSize(QtCore.QSize(36, 37))
         self.sub4.setObjectName("sub4")
@@ -608,7 +608,7 @@ class Ui_MainWindow(object):
         self.sub3.setFont(font)
         self.sub3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub3.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub3.setIconSize(QtCore.QSize(36, 37))
         self.sub3.setObjectName("sub3")
@@ -620,7 +620,7 @@ class Ui_MainWindow(object):
         self.sub7.setFont(font)
         self.sub7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub7.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub7.setIconSize(QtCore.QSize(36, 37))
         self.sub7.setObjectName("sub7")
@@ -632,7 +632,7 @@ class Ui_MainWindow(object):
         self.sub5.setFont(font)
         self.sub5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub5.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub5.setIconSize(QtCore.QSize(36, 37))
         self.sub5.setObjectName("sub5")
@@ -644,7 +644,7 @@ class Ui_MainWindow(object):
         self.sub6.setFont(font)
         self.sub6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub6.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub6.setIconSize(QtCore.QSize(36, 37))
         self.sub6.setObjectName("sub6")
@@ -656,19 +656,84 @@ class Ui_MainWindow(object):
         self.sub8.setFont(font)
         self.sub8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub8.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127, 0);\n"
+"color: rgb(127, 127, 127);\n"
 "")
         self.sub8.setIconSize(QtCore.QSize(36, 37))
         self.sub8.setObjectName("sub8")
         self.submit_2 = QtWidgets.QPushButton(self.day_task)
         self.submit_2.setGeometry(QtCore.QRect(1140, 750, 41, 61))
         self.submit_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.submit_2.setStyleSheet("background-color: none;\n"
-"")
+        self.submit_2.setStyleSheet("background-color: none;")
         self.submit_2.setText("")
         self.submit_2.setIcon(icon2)
         self.submit_2.setIconSize(QtCore.QSize(36, 37))
         self.submit_2.setObjectName("submit_2")
+        self.delete1 = QtWidgets.QPushButton(self.day_task)
+        self.delete1.setGeometry(QtCore.QRect(1190, 130, 41, 51))
+        self.delete1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete1.setStyleSheet("background-color: none;")
+        self.delete1.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("images/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.delete1.setIcon(icon3)
+        self.delete1.setIconSize(QtCore.QSize(36, 37))
+        self.delete1.setObjectName("delete1")
+        self.delete2 = QtWidgets.QPushButton(self.day_task)
+        self.delete2.setGeometry(QtCore.QRect(1190, 200, 41, 51))
+        self.delete2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete2.setStyleSheet("background-color: none;")
+        self.delete2.setText("")
+        self.delete2.setIcon(icon3)
+        self.delete2.setIconSize(QtCore.QSize(36, 37))
+        self.delete2.setObjectName("delete2")
+        self.delete3 = QtWidgets.QPushButton(self.day_task)
+        self.delete3.setGeometry(QtCore.QRect(1190, 270, 41, 51))
+        self.delete3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete3.setStyleSheet("background-color: none;")
+        self.delete3.setText("")
+        self.delete3.setIcon(icon3)
+        self.delete3.setIconSize(QtCore.QSize(36, 37))
+        self.delete3.setObjectName("delete3")
+        self.delete4 = QtWidgets.QPushButton(self.day_task)
+        self.delete4.setGeometry(QtCore.QRect(1190, 340, 41, 51))
+        self.delete4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete4.setStyleSheet("background-color: none;")
+        self.delete4.setText("")
+        self.delete4.setIcon(icon3)
+        self.delete4.setIconSize(QtCore.QSize(36, 37))
+        self.delete4.setObjectName("delete4")
+        self.delete7 = QtWidgets.QPushButton(self.day_task)
+        self.delete7.setGeometry(QtCore.QRect(1190, 550, 41, 51))
+        self.delete7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete7.setStyleSheet("background-color: none;")
+        self.delete7.setText("")
+        self.delete7.setIcon(icon3)
+        self.delete7.setIconSize(QtCore.QSize(36, 37))
+        self.delete7.setObjectName("delete7")
+        self.delete5 = QtWidgets.QPushButton(self.day_task)
+        self.delete5.setGeometry(QtCore.QRect(1190, 410, 41, 51))
+        self.delete5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete5.setStyleSheet("background-color: none;")
+        self.delete5.setText("")
+        self.delete5.setIcon(icon3)
+        self.delete5.setIconSize(QtCore.QSize(36, 37))
+        self.delete5.setObjectName("delete5")
+        self.delete8 = QtWidgets.QPushButton(self.day_task)
+        self.delete8.setGeometry(QtCore.QRect(1190, 620, 41, 51))
+        self.delete8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete8.setStyleSheet("background-color: none;")
+        self.delete8.setText("")
+        self.delete8.setIcon(icon3)
+        self.delete8.setIconSize(QtCore.QSize(36, 37))
+        self.delete8.setObjectName("delete8")
+        self.delete6 = QtWidgets.QPushButton(self.day_task)
+        self.delete6.setGeometry(QtCore.QRect(1190, 480, 41, 51))
+        self.delete6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.delete6.setStyleSheet("background-color: none;")
+        self.delete6.setText("")
+        self.delete6.setIcon(icon3)
+        self.delete6.setIconSize(QtCore.QSize(36, 37))
+        self.delete6.setObjectName("delete6")
         self.label_29.raise_()
         self.mini2.raise_()
         self.addtask_3.raise_()
@@ -694,6 +759,38 @@ class Ui_MainWindow(object):
         self.sub6.raise_()
         self.sub8.raise_()
         self.submit_2.raise_()
+        self.delete1.raise_()
+        self.delete2.raise_()
+        self.delete3.raise_()
+        self.delete4.raise_()
+        self.delete7.raise_()
+        self.delete5.raise_()
+        self.delete8.raise_()
+        self.delete6.raise_()
+        self.task1.hide()
+        self.task2.hide()
+        self.task3.hide()
+        self.task4.hide()
+        self.task5.hide()
+        self.task6.hide()
+        self.task7.hide()
+        self.task8.hide()
+        self.sub1.hide()
+        self.sub2.hide()
+        self.sub3.hide()
+        self.sub4.hide()
+        self.sub5.hide()
+        self.sub6.hide()
+        self.sub7.hide()
+        self.sub8.hide()
+        self.delete1.hide()
+        self.delete2.hide()
+        self.delete3.hide()
+        self.delete4.hide()
+        self.delete5.hide()
+        self.delete6.hide()
+        self.delete7.hide()
+        self.delete8.hide()
         self.stackedWidget.addWidget(self.day_task)
         MainWindow.setCentralWidget(self.centralwidget)
 
