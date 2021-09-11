@@ -264,17 +264,17 @@ class Ui_MainWindow(object):
         self.label_14.setStyleSheet("color: rgb(113, 113, 113);")
         self.label_14.setAlignment(QtCore.Qt.AlignCenter)
         self.label_14.setObjectName("label_14")
-        self.label_28 = QtWidgets.QLabel(self.day)
-        self.label_28.setGeometry(QtCore.QRect(1140, 750, 55, 61))
-        font = QtGui.QFont()
-        font.setFamily("Open Sans Light")
-        font.setPointSize(29)
-        self.label_28.setFont(font)
-        self.label_28.setStyleSheet("color: rgb(113, 113, 113);")
-        self.label_28.setText("")
-        self.label_28.setPixmap(QtGui.QPixmap("images/submit.png"))
-        self.label_28.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_28.setObjectName("label_28")
+        self.submit = QtWidgets.QPushButton(self.day)
+        self.submit.setGeometry(QtCore.QRect(1140, 750, 41, 61))
+        self.submit.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.submit.setStyleSheet("background-color: none;\n"
+"")
+        self.submit.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("images/submit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.submit.setIcon(icon2)
+        self.submit.setIconSize(QtCore.QSize(36, 37))
+        self.submit.setObjectName("submit")
         self.stackedWidget.addWidget(self.day)
         self.day_task = QtWidgets.QWidget()
         self.day_task.setStyleSheet("border-radius: 2px;")
@@ -292,15 +292,15 @@ class Ui_MainWindow(object):
         self.label_29.setText("")
         self.label_29.setPixmap(QtGui.QPixmap("images/bak_day.jpg"))
         self.label_29.setObjectName("label_29")
-        self.mini1_3 = QtWidgets.QPushButton(self.day_task)
-        self.mini1_3.setGeometry(QtCore.QRect(1200, 0, 31, 51))
-        self.mini1_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.mini1_3.setStyleSheet("background-color: none;\n"
+        self.mini2 = QtWidgets.QPushButton(self.day_task)
+        self.mini2.setGeometry(QtCore.QRect(1200, 0, 31, 51))
+        self.mini2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.mini2.setStyleSheet("background-color: none;\n"
 "")
-        self.mini1_3.setText("")
-        self.mini1_3.setIcon(icon1)
-        self.mini1_3.setIconSize(QtCore.QSize(36, 37))
-        self.mini1_3.setObjectName("mini1_3")
+        self.mini2.setText("")
+        self.mini2.setIcon(icon1)
+        self.mini2.setIconSize(QtCore.QSize(36, 37))
+        self.mini2.setObjectName("mini2")
         self.addtask_3 = QtWidgets.QLineEdit(self.day_task)
         self.addtask_3.setGeometry(QtCore.QRect(420, 750, 781, 61))
         font = QtGui.QFont()
@@ -459,23 +459,23 @@ class Ui_MainWindow(object):
         self.date2.setFont(font)
         self.date2.setStyleSheet("color: rgb(255, 255, 255);")
         self.date2.setObjectName("date2")
-        self.close1_3 = QtWidgets.QPushButton(self.day_task)
-        self.close1_3.setGeometry(QtCore.QRect(1240, 10, 31, 31))
-        self.close1_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.close1_3.setStyleSheet("background-color: none;\n"
+        self.close2 = QtWidgets.QPushButton(self.day_task)
+        self.close2.setGeometry(QtCore.QRect(1240, 10, 31, 31))
+        self.close2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.close2.setStyleSheet("background-color: none;\n"
 "")
-        self.close1_3.setText("")
-        self.close1_3.setIcon(icon)
-        self.close1_3.setIconSize(QtCore.QSize(36, 37))
-        self.close1_3.setObjectName("close1_3")
+        self.close2.setText("")
+        self.close2.setIcon(icon)
+        self.close2.setIconSize(QtCore.QSize(36, 37))
+        self.close2.setObjectName("close2")
         self.task1 = QtWidgets.QLabel(self.day_task)
         self.task1.setGeometry(QtCore.QRect(380, 130, 861, 51))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task1.setFont(font)
-        self.task1.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task1.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task1.setText("")
         self.task1.setAlignment(QtCore.Qt.AlignCenter)
@@ -486,8 +486,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task2.setFont(font)
-        self.task2.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task2.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task2.setText("")
         self.task2.setAlignment(QtCore.Qt.AlignCenter)
@@ -498,8 +498,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task4.setFont(font)
-        self.task4.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task4.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task4.setText("")
         self.task4.setAlignment(QtCore.Qt.AlignCenter)
@@ -510,8 +510,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task3.setFont(font)
-        self.task3.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task3.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task3.setText("")
         self.task3.setAlignment(QtCore.Qt.AlignCenter)
@@ -522,8 +522,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task6.setFont(font)
-        self.task6.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task6.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task6.setText("")
         self.task6.setAlignment(QtCore.Qt.AlignCenter)
@@ -534,8 +534,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task8.setFont(font)
-        self.task8.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task8.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task8.setText("")
         self.task8.setAlignment(QtCore.Qt.AlignCenter)
@@ -546,8 +546,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task7.setFont(font)
-        self.task7.setStyleSheet("background-color: rgb(255, 213, 246, 180);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task7.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task7.setText("")
         self.task7.setAlignment(QtCore.Qt.AlignCenter)
@@ -558,8 +558,8 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.task5.setFont(font)
-        self.task5.setStyleSheet("background-color: rgb(255, 213, 246, 150);\n"
-"color: rgb(70, 70, 70);\n"
+        self.task5.setStyleSheet("background-color: rgb(255, 213, 246, 0);\n"
+"color: rgb(10, 10, 10);\n"
 "border-radius: 7px;")
         self.task5.setText("")
         self.task5.setAlignment(QtCore.Qt.AlignCenter)
@@ -572,7 +572,7 @@ class Ui_MainWindow(object):
         self.sub1.setFont(font)
         self.sub1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub1.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub1.setIconSize(QtCore.QSize(36, 37))
         self.sub1.setObjectName("sub1")
@@ -584,7 +584,7 @@ class Ui_MainWindow(object):
         self.sub2.setFont(font)
         self.sub2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub2.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub2.setIconSize(QtCore.QSize(36, 37))
         self.sub2.setObjectName("sub2")
@@ -596,7 +596,7 @@ class Ui_MainWindow(object):
         self.sub4.setFont(font)
         self.sub4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub4.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub4.setIconSize(QtCore.QSize(36, 37))
         self.sub4.setObjectName("sub4")
@@ -608,7 +608,7 @@ class Ui_MainWindow(object):
         self.sub3.setFont(font)
         self.sub3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub3.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub3.setIconSize(QtCore.QSize(36, 37))
         self.sub3.setObjectName("sub3")
@@ -620,7 +620,7 @@ class Ui_MainWindow(object):
         self.sub7.setFont(font)
         self.sub7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub7.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub7.setIconSize(QtCore.QSize(36, 37))
         self.sub7.setObjectName("sub7")
@@ -632,7 +632,7 @@ class Ui_MainWindow(object):
         self.sub5.setFont(font)
         self.sub5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub5.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub5.setIconSize(QtCore.QSize(36, 37))
         self.sub5.setObjectName("sub5")
@@ -644,7 +644,7 @@ class Ui_MainWindow(object):
         self.sub6.setFont(font)
         self.sub6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub6.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub6.setIconSize(QtCore.QSize(36, 37))
         self.sub6.setObjectName("sub6")
@@ -656,17 +656,26 @@ class Ui_MainWindow(object):
         self.sub8.setFont(font)
         self.sub8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sub8.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
+"color: rgb(127, 127, 127, 0);\n"
 "")
         self.sub8.setIconSize(QtCore.QSize(36, 37))
         self.sub8.setObjectName("sub8")
+        self.submit_2 = QtWidgets.QPushButton(self.day_task)
+        self.submit_2.setGeometry(QtCore.QRect(1140, 750, 41, 61))
+        self.submit_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.submit_2.setStyleSheet("background-color: none;\n"
+"")
+        self.submit_2.setText("")
+        self.submit_2.setIcon(icon2)
+        self.submit_2.setIconSize(QtCore.QSize(36, 37))
+        self.submit_2.setObjectName("submit_2")
         self.label_29.raise_()
-        self.mini1_3.raise_()
+        self.mini2.raise_()
         self.addtask_3.raise_()
         self.label_30.raise_()
         self.frame_3.raise_()
         self.date2.raise_()
-        self.close1_3.raise_()
+        self.close2.raise_()
         self.label_27.raise_()
         self.task1.raise_()
         self.task2.raise_()
@@ -684,6 +693,7 @@ class Ui_MainWindow(object):
         self.sub5.raise_()
         self.sub6.raise_()
         self.sub8.raise_()
+        self.submit_2.raise_()
         self.stackedWidget.addWidget(self.day_task)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -691,6 +701,8 @@ class Ui_MainWindow(object):
         self.stackedWidget.setCurrentIndex(0)
         self.close1.clicked.connect(MainWindow.close)
         self.mini1.clicked.connect(MainWindow.showMinimized)
+        self.close2.clicked.connect(MainWindow.close)
+        self.mini2.clicked.connect(MainWindow.showMinimized)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -729,13 +741,3 @@ class Ui_MainWindow(object):
         self.sub5.setText(_translate("MainWindow", "O"))
         self.sub6.setText(_translate("MainWindow", "O"))
         self.sub8.setText(_translate("MainWindow", "O"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
