@@ -6,6 +6,7 @@ from datetime import date
 import calendar
 import sqlite3
 from pygame import mixer
+import webbrowser
 
 date_full = str(date.today()).split('-')
 date_name = 'date'+date_full[0]+date_full[1]+date_full[2]
@@ -44,16 +45,22 @@ class Root(QMainWindow):
         self.ui.addtask.setPlaceholderText("Add a Task")
         self.ui.addtask_3.setPlaceholderText("Add a Task")
 
+        # set username and profile
         self.ui.nameuser.setText(os.getlogin())
         self.ui.profile.setText(str(os.getlogin())[0])
         self.ui.nameuser2.setText(os.getlogin())
         self.ui.profile2.setText(str(os.getlogin())[0])
         self.ui.nameuser2_2.setText(os.getlogin())
         self.ui.profile2_2.setText(str(os.getlogin())[0])
+        self.ui.nameuser2_3.setText(os.getlogin())
+        self.ui.profile2_3.setText(str(os.getlogin())[0])
+        self.ui.nameuser5.setText(os.getlogin())
+        self.ui.profile5.setText(str(os.getlogin())[0])
 
         self.ui.submit.clicked.connect(self.submit)
         self.ui.submit_2.clicked.connect(self.submit2)
 
+        # timer
         self.ui.timer1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.set_timer))
         self.ui.timer1.clicked.connect(self.page_clock)
         self.ui.timer2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.set_timer))
@@ -70,18 +77,50 @@ class Root(QMainWindow):
         self.ui.timer7.clicked.connect(self.page_clock)
         self.ui.timer8.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.set_timer))
         self.ui.timer8.clicked.connect(self.page_clock)
+
         self.ui.cancel_time.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
         self.ui.cancel_time.clicked.connect(self.page_clock_cancel)
         self.ui.sub_time.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
         self.ui.sub_time.clicked.connect(self.set_clock)
         self.ui.ok_clock.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
         self.ui.ok_clock.clicked.connect(self.stop_clock)
+
+        # pages
         self.ui.comp1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.completed))
         self.ui.comp1.clicked.connect(self.page_clock)
-        self.ui.my_day3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
-        self.ui.my_day3.clicked.connect(self.page_clock_cancel)
         self.ui.comp2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.completed))
         self.ui.comp2.clicked.connect(self.page_clock)
+        self.ui.comp4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.completed))
+        self.ui.comp4.clicked.connect(self.page_clock)
+        self.ui.comp5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.completed))
+        self.ui.comp5.clicked.connect(self.page_clock)
+
+        self.ui.my_day3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
+        self.ui.my_day3.clicked.connect(self.page_clock_cancel)
+        self.ui.my_day4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
+        self.ui.my_day4.clicked.connect(self.page_clock_cancel)
+        self.ui.my_day5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.day_task))
+        self.ui.my_day5.clicked.connect(self.page_clock_cancel)
+
+        self.ui.calender1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.calender))
+        self.ui.calender1.clicked.connect(self.page_clock)
+        self.ui.calender2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.calender))
+        self.ui.calender2.clicked.connect(self.page_clock)
+        self.ui.calender3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.calender))
+        self.ui.calender3.clicked.connect(self.page_clock)
+        self.ui.calender5.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.calender))
+        self.ui.calender5.clicked.connect(self.page_clock)
+
+        self.ui.about1.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.about))
+        self.ui.about1.clicked.connect(self.page_clock)
+        self.ui.about2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.about))
+        self.ui.about2.clicked.connect(self.page_clock)
+        self.ui.about3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.about))
+        self.ui.about3.clicked.connect(self.page_clock)
+        self.ui.about4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.about))
+        self.ui.about4.clicked.connect(self.page_clock)
+
+        self.ui.search_cal.clicked.connect(self.calender_search)
 
         # del task
         self.ui.delete1.clicked.connect(self.remove_task1)
@@ -102,6 +141,11 @@ class Root(QMainWindow):
         self.ui.sub6.clicked.connect(self.sub_task6)
         self.ui.sub7.clicked.connect(self.sub_task7)
         self.ui.sub8.clicked.connect(self.sub_task8)
+
+        self.ui.date_cal.setPlaceholderText("Enter date : 2021/10/12")
+
+        # link contact
+        self.ui.contactme.clicked.connect(self.contact)
 
     def mousePressEvent(self, evt):
         self.oldPos = evt.globalPos()
@@ -508,6 +552,131 @@ class Root(QMainWindow):
         conn.commit()
         self.remover(number)
         self.set_task()
+
+    def calender_search(self):
+        global c
+        global conn
+        self.ui.com1_cal.hide()
+        self.ui.com2_cal.hide()
+        self.ui.com3_cal.hide()
+        self.ui.com4_cal.hide()
+        self.ui.com5_cal.hide()
+        self.ui.com6_cal.hide()
+        self.ui.com7_cal.hide()
+        self.ui.com8_cal.hide()
+        self.ui.task1_cal.hide()
+        self.ui.task2_cal.hide()
+        self.ui.task3_cal.hide()
+        self.ui.task4_cal.hide()
+        self.ui.task5_cal.hide()
+        self.ui.task6_cal.hide()
+        self.ui.task7_cal.hide()
+        self.ui.task8_cal.hide()
+        self.ui.True1.hide()
+        self.ui.True2.hide()
+        self.ui.True3.hide()
+        self.ui.True4.hide()
+        self.ui.True5.hide()
+        self.ui.True6.hide()
+        self.ui.True7.hide()
+        self.ui.True8.hide()
+        self.ui.False1.hide()
+        self.ui.False2.hide()
+        self.ui.False3.hide()
+        self.ui.False4.hide()
+        self.ui.False5.hide()
+        self.ui.False6.hide()
+        self.ui.False7.hide()
+        self.ui.False8.hide()
+        if len(self.ui.date_cal.text()) == 10:
+            names = self.ui.date_cal.text().split('/')
+            name = 'date'+names[0]+names[1]+names[2]
+            c.execute(f'''CREATE TABLE IF NOT EXISTS {name}(
+                        task text,
+                        number integer,
+                        status integer
+                     )''')
+            conn.commit()
+
+            tasks = c.execute(f'SELECT * FROM {name}')
+            count_com = 0
+            count_task = 0
+            for row in tasks:
+                if row[2] == 1 and len(row[0]) != 0:
+                    count_com += 1
+                    if count_com == 1:
+                        self.ui.com1_cal.show()
+                        self.ui.True1.show()
+                        self.ui.com1_cal.setText(row[0])
+                    elif count_com == 2:
+                        self.ui.com2_cal.show()
+                        self.ui.True2.show()
+                        self.ui.com2_cal.setText(row[0])
+                    elif count_com == 3:
+                        self.ui.com3_cal.show()
+                        self.ui.True3.show()
+                        self.ui.com3_cal.setText(row[0])
+                    elif count_com == 4:
+                        self.ui.com4_cal.show()
+                        self.ui.True4.show()
+                        self.ui.com4_cal.setText(row[0])
+                    elif count_com == 5:
+                        self.ui.com5_cal.show()
+                        self.ui.True5.show()
+                        self.ui.com5_cal.setText(row[0])
+                    elif count_com == 6:
+                        self.ui.com6_cal.show()
+                        self.ui.True6.show()
+                        self.ui.com6_cal.setText(row[0])
+                    elif count_com == 7:
+                        self.ui.com7_cal.show()
+                        self.ui.True7.show()
+                        self.ui.com7_cal.setText(row[0])
+                    elif count_com == 8:
+                        self.ui.com8_cal.show()
+                        self.ui.True8.show()
+                        self.ui.com8_cal.setText(row[0])
+
+                elif row[2] == 0 and len(row[0]) != 0:
+                    count_task += 1
+                    if count_task == 1:
+                        self.ui.task1_cal.show()
+                        self.ui.False1.show()
+                        self.ui.task1_cal.setText(row[0])
+                    elif count_task == 2:
+                        self.ui.task2_cal.show()
+                        self.ui.False2.show()
+                        self.ui.task2_cal.setText(row[0])
+                    elif count_task == 3:
+                        self.ui.task3_cal.show()
+                        self.ui.False3.show()
+                        self.ui.task3_cal.setText(row[0])
+                    elif count_task == 4:
+                        self.ui.task4_cal.show()
+                        self.ui.False4.show()
+                        self.ui.task4_cal.setText(row[0])
+                    elif count_task == 5:
+                        self.ui.task5_cal.show()
+                        self.ui.False5.show()
+                        self.ui.task5_cal.setText(row[0])
+                    elif count_task == 6:
+                        self.ui.task6_cal.show()
+                        self.ui.False6.show()
+                        self.ui.task6_cal.setText(row[0])
+                    elif count_task == 7:
+                        self.ui.task7_cal.show()
+                        self.ui.False7.show()
+                        self.ui.task7_cal.setText(row[0])
+                    elif count_task == 8:
+                        self.ui.task8_cal.show()
+                        self.ui.False8.show()
+                        self.ui.task8_cal.setText(row[0])
+        else:
+            self.ui.date_cal.clear()
+            self.ui.date_cal.setPlaceholderText("Enter date : 2021/10/12")
+
+    def contact(self):
+        webbrowser.open('https://bioly.io/AbbasAtaei')
 
 
 if __name__ == '__main__':
