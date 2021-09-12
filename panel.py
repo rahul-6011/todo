@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -69,7 +70,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.myday1.setFont(font)
-        self.myday1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.myday1.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.myday1.setStyleSheet("border: 0px;\n"
 "color: #647783;\n"
 "background-color: rgb(248, 249, 250);")
@@ -92,19 +93,24 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet("color: #647783;\n"
 "background-color: none;")
         self.label_2.setObjectName("label_2")
-        self.myday1_2 = QtWidgets.QPushButton(self.frame)
-        self.myday1_2.setGeometry(QtCore.QRect(0, 200, 341, 61))
+        self.comp1 = QtWidgets.QPushButton(self.frame)
+        self.comp1.setGeometry(QtCore.QRect(0, 200, 341, 61))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
-        self.myday1_2.setFont(font)
-        self.myday1_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_2.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
-        self.myday1_2.setObjectName("myday1_2")
+        self.comp1.setFont(font)
+        self.comp1.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.comp1.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
+        self.comp1.setObjectName("comp1")
         self.label_3 = QtWidgets.QLabel(self.frame)
         self.label_3.setGeometry(QtCore.QRect(20, 200, 41, 61))
         self.label_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
@@ -121,10 +127,15 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         self.myday1_3.setFont(font)
-        self.myday1_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_3.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
+        self.myday1_3.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_3.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
         self.myday1_3.setObjectName("myday1_3")
         self.myday1_4 = QtWidgets.QPushButton(self.frame)
         self.myday1_4.setGeometry(QtCore.QRect(0, 320, 341, 61))
@@ -134,10 +145,15 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         self.myday1_4.setFont(font)
-        self.myday1_4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_4.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
+        self.myday1_4.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_4.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
         self.myday1_4.setObjectName("myday1_4")
         self.label_4 = QtWidgets.QLabel(self.frame)
         self.label_4.setGeometry(QtCore.QRect(20, 260, 41, 61))
@@ -236,8 +252,13 @@ class Ui_MainWindow(object):
         self.close1 = QtWidgets.QPushButton(self.day)
         self.close1.setGeometry(QtCore.QRect(1240, 10, 31, 31))
         self.close1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.close1.setStyleSheet("background-color: none;\n"
-"")
+        self.close1.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"    border-radius: 1px;\n"
+"}")
         self.close1.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("images/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -245,10 +266,15 @@ class Ui_MainWindow(object):
         self.close1.setIconSize(QtCore.QSize(36, 37))
         self.close1.setObjectName("close1")
         self.mini1 = QtWidgets.QPushButton(self.day)
-        self.mini1.setGeometry(QtCore.QRect(1200, 0, 31, 51))
+        self.mini1.setGeometry(QtCore.QRect(1200, 10, 31, 31))
         self.mini1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.mini1.setStyleSheet("background-color: none;\n"
-"")
+        self.mini1.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"    border-radius: 1px;\n"
+"}")
         self.mini1.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("images/mini.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -293,10 +319,14 @@ class Ui_MainWindow(object):
         self.label_29.setPixmap(QtGui.QPixmap("images/bak_day.jpg"))
         self.label_29.setObjectName("label_29")
         self.mini2 = QtWidgets.QPushButton(self.day_task)
-        self.mini2.setGeometry(QtCore.QRect(1200, 0, 31, 51))
+        self.mini2.setGeometry(QtCore.QRect(1200, 10, 31, 31))
         self.mini2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.mini2.setStyleSheet("background-color: none;\n"
-"")
+        self.mini2.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"}")
         self.mini2.setText("")
         self.mini2.setIcon(icon1)
         self.mini2.setIconSize(QtCore.QSize(36, 37))
@@ -363,14 +393,14 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.myday1_9.setFont(font)
-        self.myday1_9.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.myday1_9.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.myday1_9.setStyleSheet("border: 0px;\n"
 "color: #647783;\n"
-"background-color: rgb(248, 249, 250);")
+"background-color: rgb(248, 249, 250, 200);")
         self.myday1_9.setObjectName("myday1_9")
         self.label_34 = QtWidgets.QLabel(self.frame_3)
         self.label_34.setGeometry(QtCore.QRect(20, 140, 41, 61))
-        self.label_34.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_34.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.label_34.setStyleSheet("background-color: none;")
         self.label_34.setText("")
         self.label_34.setPixmap(QtGui.QPixmap("images/my day.png"))
@@ -382,26 +412,31 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI Black")
         font.setPointSize(14)
         self.label_35.setFont(font)
-        self.label_35.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_35.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.label_35.setStyleSheet("color: #647783;\n"
 "background-color: none;")
         self.label_35.setObjectName("label_35")
-        self.myday1_10 = QtWidgets.QPushButton(self.frame_3)
-        self.myday1_10.setGeometry(QtCore.QRect(0, 200, 341, 61))
+        self.comp2 = QtWidgets.QPushButton(self.frame_3)
+        self.comp2.setGeometry(QtCore.QRect(0, 200, 341, 61))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         font.setBold(False)
         font.setWeight(50)
-        self.myday1_10.setFont(font)
-        self.myday1_10.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_10.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
-        self.myday1_10.setObjectName("myday1_10")
+        self.comp2.setFont(font)
+        self.comp2.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.comp2.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
+        self.comp2.setObjectName("comp2")
         self.label_36 = QtWidgets.QLabel(self.frame_3)
         self.label_36.setGeometry(QtCore.QRect(20, 200, 41, 61))
-        self.label_36.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_36.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.label_36.setStyleSheet("background-color: none;")
         self.label_36.setText("")
         self.label_36.setPixmap(QtGui.QPixmap("images/important.png"))
@@ -415,10 +450,15 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         self.myday1_11.setFont(font)
-        self.myday1_11.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_11.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
+        self.myday1_11.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_11.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
         self.myday1_11.setObjectName("myday1_11")
         self.myday1_12 = QtWidgets.QPushButton(self.frame_3)
         self.myday1_12.setGeometry(QtCore.QRect(0, 320, 341, 61))
@@ -428,14 +468,19 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         self.myday1_12.setFont(font)
-        self.myday1_12.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.myday1_12.setStyleSheet("border: 0px;\n"
-"color: #000000;\n"
-"background-color: none;")
+        self.myday1_12.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_12.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
         self.myday1_12.setObjectName("myday1_12")
         self.label_37 = QtWidgets.QLabel(self.frame_3)
         self.label_37.setGeometry(QtCore.QRect(20, 260, 41, 61))
-        self.label_37.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_37.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.label_37.setStyleSheet("background-color: none;")
         self.label_37.setText("")
         self.label_37.setPixmap(QtGui.QPixmap("images/personal.png"))
@@ -443,7 +488,7 @@ class Ui_MainWindow(object):
         self.label_37.setObjectName("label_37")
         self.label_38 = QtWidgets.QLabel(self.frame_3)
         self.label_38.setGeometry(QtCore.QRect(20, 320, 41, 61))
-        self.label_38.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.label_38.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.label_38.setStyleSheet("background-color: none;")
         self.label_38.setText("")
         self.label_38.setPixmap(QtGui.QPixmap("images/setting.png"))
@@ -462,8 +507,12 @@ class Ui_MainWindow(object):
         self.close2 = QtWidgets.QPushButton(self.day_task)
         self.close2.setGeometry(QtCore.QRect(1240, 10, 31, 31))
         self.close2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.close2.setStyleSheet("background-color: none;\n"
-"")
+        self.close2.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"}")
         self.close2.setText("")
         self.close2.setIcon(icon)
         self.close2.setIconSize(QtCore.QSize(36, 37))
@@ -571,9 +620,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub1.setFont(font)
         self.sub1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub1.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub1.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub1.setIconSize(QtCore.QSize(36, 37))
         self.sub1.setObjectName("sub1")
         self.sub2 = QtWidgets.QPushButton(self.day_task)
@@ -583,9 +637,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub2.setFont(font)
         self.sub2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub2.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub2.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub2.setIconSize(QtCore.QSize(36, 37))
         self.sub2.setObjectName("sub2")
         self.sub4 = QtWidgets.QPushButton(self.day_task)
@@ -595,9 +654,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub4.setFont(font)
         self.sub4.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub4.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub4.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub4.setIconSize(QtCore.QSize(36, 37))
         self.sub4.setObjectName("sub4")
         self.sub3 = QtWidgets.QPushButton(self.day_task)
@@ -607,9 +671,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub3.setFont(font)
         self.sub3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub3.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub3.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub3.setIconSize(QtCore.QSize(36, 37))
         self.sub3.setObjectName("sub3")
         self.sub7 = QtWidgets.QPushButton(self.day_task)
@@ -619,9 +688,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub7.setFont(font)
         self.sub7.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub7.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub7.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub7.setIconSize(QtCore.QSize(36, 37))
         self.sub7.setObjectName("sub7")
         self.sub5 = QtWidgets.QPushButton(self.day_task)
@@ -631,9 +705,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub5.setFont(font)
         self.sub5.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub5.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub5.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub5.setIconSize(QtCore.QSize(36, 37))
         self.sub5.setObjectName("sub5")
         self.sub6 = QtWidgets.QPushButton(self.day_task)
@@ -643,9 +722,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub6.setFont(font)
         self.sub6.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub6.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub6.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub6.setIconSize(QtCore.QSize(36, 37))
         self.sub6.setObjectName("sub6")
         self.sub8 = QtWidgets.QPushButton(self.day_task)
@@ -655,9 +739,14 @@ class Ui_MainWindow(object):
         font.setPointSize(17)
         self.sub8.setFont(font)
         self.sub8.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.sub8.setStyleSheet("background-color: none;\n"
-"color: rgb(127, 127, 127);\n"
-"")
+        self.sub8.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: rgb(127, 127, 127);\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    color: rgb(170, 255, 255);\n"
+"}")
         self.sub8.setIconSize(QtCore.QSize(36, 37))
         self.sub8.setObjectName("sub8")
         self.submit_2 = QtWidgets.QPushButton(self.day_task)
@@ -841,38 +930,6 @@ class Ui_MainWindow(object):
         self.timer8.raise_()
         self.timer7.raise_()
         self.timer6.raise_()
-        self.task1.hide()
-        self.task2.hide()
-        self.task3.hide()
-        self.task4.hide()
-        self.task5.hide()
-        self.task6.hide()
-        self.task7.hide()
-        self.task8.hide()
-        self.sub1.hide()
-        self.sub2.hide()
-        self.sub3.hide()
-        self.sub4.hide()
-        self.sub5.hide()
-        self.sub6.hide()
-        self.sub7.hide()
-        self.sub8.hide()
-        self.delete1.hide()
-        self.delete2.hide()
-        self.delete3.hide()
-        self.delete4.hide()
-        self.delete5.hide()
-        self.delete6.hide()
-        self.delete7.hide()
-        self.delete8.hide()
-        self.timer1.hide()
-        self.timer2.hide()
-        self.timer3.hide()
-        self.timer4.hide()
-        self.timer5.hide()
-        self.timer6.hide()
-        self.timer7.hide()
-        self.timer8.hide()
         self.stackedWidget.addWidget(self.day_task)
         self.set_timer = QtWidgets.QWidget()
         self.set_timer.setObjectName("set_timer")
@@ -1037,13 +1094,13 @@ class Ui_MainWindow(object):
 "    \n"
 "}")
         self.ok_clock.setObjectName("ok_clock")
-        self.git_clock = QtWidgets.QLabel(self.frame_4)
-        self.git_clock.setGeometry(QtCore.QRect(120, 80, 231, 191))
-        self.git_clock.setText("")
+        self.gif_clock = QtWidgets.QLabel(self.frame_4)
+        self.gif_clock.setGeometry(QtCore.QRect(120, 80, 231, 191))
+        self.gif_clock.setText("")
         self.movie = QMovie('images/clock2.gif')
-        self.git_clock.setMovie(self.movie)
+        self.gif_clock.setMovie(self.movie)
         self.movie.start()
-        self.git_clock.setObjectName("git_clock")
+        self.gif_clock.setObjectName("gif_clock")
         self.now_time = QtWidgets.QLabel(self.frame_4)
         self.now_time.setGeometry(QtCore.QRect(0, 280, 461, 41))
         font = QtGui.QFont()
@@ -1061,6 +1118,363 @@ class Ui_MainWindow(object):
         self.label_32.raise_()
         self.frame_4.raise_()
         self.stackedWidget.addWidget(self.stop_timer)
+        self.completed = QtWidgets.QWidget()
+        self.completed.setStyleSheet("border-radius: 2px;")
+        self.completed.setObjectName("completed")
+        self.com6 = QtWidgets.QLabel(self.completed)
+        self.com6.setGeometry(QtCore.QRect(380, 480, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com6.setFont(font)
+        self.com6.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com6.setText("")
+        self.com6.setAlignment(QtCore.Qt.AlignCenter)
+        self.com6.setObjectName("com6")
+        self.com7 = QtWidgets.QLabel(self.completed)
+        self.com7.setGeometry(QtCore.QRect(380, 550, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com7.setFont(font)
+        self.com7.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com7.setText("")
+        self.com7.setAlignment(QtCore.Qt.AlignCenter)
+        self.com7.setObjectName("com7")
+        self.com1 = QtWidgets.QLabel(self.completed)
+        self.com1.setGeometry(QtCore.QRect(380, 130, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com1.setFont(font)
+        self.com1.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com1.setText("")
+        self.com1.setAlignment(QtCore.Qt.AlignCenter)
+        self.com1.setObjectName("com1")
+        self.label_28 = QtWidgets.QLabel(self.completed)
+        self.label_28.setGeometry(QtCore.QRect(380, 40, 181, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semibold")
+        font.setPointSize(21)
+        self.label_28.setFont(font)
+        self.label_28.setStyleSheet("color: rgb(19, 60, 127);")
+        self.label_28.setObjectName("label_28")
+        self.label_31 = QtWidgets.QLabel(self.completed)
+        self.label_31.setGeometry(QtCore.QRect(340, 0, 941, 851))
+        self.label_31.setText("")
+        self.label_31.setPixmap(QtGui.QPixmap("images/bak_com.jpg"))
+        self.label_31.setObjectName("label_31")
+        self.com5 = QtWidgets.QLabel(self.completed)
+        self.com5.setGeometry(QtCore.QRect(380, 410, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com5.setFont(font)
+        self.com5.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com5.setText("")
+        self.com5.setAlignment(QtCore.Qt.AlignCenter)
+        self.com5.setObjectName("com5")
+        self.com3 = QtWidgets.QLabel(self.completed)
+        self.com3.setGeometry(QtCore.QRect(380, 270, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com3.setFont(font)
+        self.com3.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com3.setText("")
+        self.com3.setAlignment(QtCore.Qt.AlignCenter)
+        self.com3.setObjectName("com3")
+        self.mini3 = QtWidgets.QPushButton(self.completed)
+        self.mini3.setGeometry(QtCore.QRect(1200, 10, 31, 31))
+        self.mini3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.mini3.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"}")
+        self.mini3.setText("")
+        self.mini3.setIcon(icon1)
+        self.mini3.setIconSize(QtCore.QSize(36, 37))
+        self.mini3.setObjectName("mini3")
+        self.date3 = QtWidgets.QLabel(self.completed)
+        self.date3.setGeometry(QtCore.QRect(380, 90, 191, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Historic")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.date3.setFont(font)
+        self.date3.setStyleSheet("color: rgb(19, 60, 127);")
+        self.date3.setObjectName("date3")
+        self.frame_5 = QtWidgets.QFrame(self.completed)
+        self.frame_5.setGeometry(QtCore.QRect(0, 0, 341, 861))
+        self.frame_5.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 0px;")
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.nameapp_4 = QtWidgets.QLabel(self.frame_5)
+        self.nameapp_4.setGeometry(QtCore.QRect(20, 10, 171, 21))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semilight")
+        font.setPointSize(12)
+        self.nameapp_4.setFont(font)
+        self.nameapp_4.setStyleSheet("color: rgb(91, 91, 91);")
+        self.nameapp_4.setObjectName("nameapp_4")
+        self.profile2_2 = QtWidgets.QLabel(self.frame_5)
+        self.profile2_2.setGeometry(QtCore.QRect(20, 70, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        self.profile2_2.setFont(font)
+        self.profile2_2.setStyleSheet("background-color: #00a300;\n"
+"color: rgb(255, 255, 255);\n"
+"border-radius: 20px;")
+        self.profile2_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.profile2_2.setObjectName("profile2_2")
+        self.nameuser2_2 = QtWidgets.QLabel(self.frame_5)
+        self.nameuser2_2.setGeometry(QtCore.QRect(70, 70, 201, 41))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Semilight")
+        font.setPointSize(11)
+        self.nameuser2_2.setFont(font)
+        self.nameuser2_2.setObjectName("nameuser2_2")
+        self.my_day3 = QtWidgets.QPushButton(self.frame_5)
+        self.my_day3.setGeometry(QtCore.QRect(0, 140, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.my_day3.setFont(font)
+        self.my_day3.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.my_day3.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
+        self.my_day3.setObjectName("my_day3")
+        self.label_39 = QtWidgets.QLabel(self.frame_5)
+        self.label_39.setGeometry(QtCore.QRect(20, 140, 41, 61))
+        self.label_39.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.label_39.setStyleSheet("background-color: none;")
+        self.label_39.setText("")
+        self.label_39.setPixmap(QtGui.QPixmap("images/my day.png"))
+        self.label_39.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_39.setObjectName("label_39")
+        self.label_40 = QtWidgets.QLabel(self.frame_5)
+        self.label_40.setGeometry(QtCore.QRect(10, 190, 21, 71))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Black")
+        font.setPointSize(14)
+        self.label_40.setFont(font)
+        self.label_40.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.label_40.setStyleSheet("color: #9f3556;\n"
+"background-color: none;")
+        self.label_40.setObjectName("label_40")
+        self.myday1_14 = QtWidgets.QPushButton(self.frame_5)
+        self.myday1_14.setGeometry(QtCore.QRect(0, 200, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI Historic")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.myday1_14.setFont(font)
+        self.myday1_14.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_14.setStyleSheet("border: 0px;\n"
+"color: #9f3556;\n"
+"background-color: rgb(248, 249, 250, 200);")
+        self.myday1_14.setObjectName("myday1_14")
+        self.label_41 = QtWidgets.QLabel(self.frame_5)
+        self.label_41.setGeometry(QtCore.QRect(20, 200, 41, 61))
+        self.label_41.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.label_41.setStyleSheet("background-color: none;")
+        self.label_41.setText("")
+        self.label_41.setPixmap(QtGui.QPixmap("images/important.png"))
+        self.label_41.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_41.setObjectName("label_41")
+        self.myday1_15 = QtWidgets.QPushButton(self.frame_5)
+        self.myday1_15.setGeometry(QtCore.QRect(0, 260, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.myday1_15.setFont(font)
+        self.myday1_15.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_15.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
+        self.myday1_15.setObjectName("myday1_15")
+        self.myday1_16 = QtWidgets.QPushButton(self.frame_5)
+        self.myday1_16.setGeometry(QtCore.QRect(0, 320, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.myday1_16.setFont(font)
+        self.myday1_16.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.myday1_16.setStyleSheet("QPushButton {\n"
+"    border: 0px;\n"
+"    color: #000000;\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgb(248, 248, 248);\n"
+"}")
+        self.myday1_16.setObjectName("myday1_16")
+        self.label_42 = QtWidgets.QLabel(self.frame_5)
+        self.label_42.setGeometry(QtCore.QRect(20, 260, 41, 61))
+        self.label_42.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.label_42.setStyleSheet("background-color: none;")
+        self.label_42.setText("")
+        self.label_42.setPixmap(QtGui.QPixmap("images/personal.png"))
+        self.label_42.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_42.setObjectName("label_42")
+        self.label_43 = QtWidgets.QLabel(self.frame_5)
+        self.label_43.setGeometry(QtCore.QRect(20, 320, 41, 61))
+        self.label_43.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.label_43.setStyleSheet("background-color: none;")
+        self.label_43.setText("")
+        self.label_43.setPixmap(QtGui.QPixmap("images/setting.png"))
+        self.label_43.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_43.setObjectName("label_43")
+        self.nameapp_4.raise_()
+        self.profile2_2.raise_()
+        self.nameuser2_2.raise_()
+        self.my_day3.raise_()
+        self.label_39.raise_()
+        self.myday1_14.raise_()
+        self.label_41.raise_()
+        self.myday1_15.raise_()
+        self.myday1_16.raise_()
+        self.label_42.raise_()
+        self.label_43.raise_()
+        self.label_40.raise_()
+        self.com8 = QtWidgets.QLabel(self.completed)
+        self.com8.setGeometry(QtCore.QRect(380, 620, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com8.setFont(font)
+        self.com8.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com8.setText("")
+        self.com8.setAlignment(QtCore.Qt.AlignCenter)
+        self.com8.setObjectName("com8")
+        self.com4 = QtWidgets.QLabel(self.completed)
+        self.com4.setGeometry(QtCore.QRect(380, 340, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com4.setFont(font)
+        self.com4.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com4.setText("")
+        self.com4.setAlignment(QtCore.Qt.AlignCenter)
+        self.com4.setObjectName("com4")
+        self.com2 = QtWidgets.QLabel(self.completed)
+        self.com2.setGeometry(QtCore.QRect(380, 200, 861, 51))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(12)
+        self.com2.setFont(font)
+        self.com2.setStyleSheet("background-color: rgba(255, 255, 255, 180);\n"
+"color: rgb(10, 10, 10);\n"
+"border-radius: 7px;")
+        self.com2.setText("")
+        self.com2.setAlignment(QtCore.Qt.AlignCenter)
+        self.com2.setObjectName("com2")
+        self.close3 = QtWidgets.QPushButton(self.completed)
+        self.close3.setGeometry(QtCore.QRect(1240, 10, 31, 31))
+        self.close3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.close3.setStyleSheet("QPushButton {\n"
+"    background-color: none;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: rgba(148, 80, 157, 100);\n"
+"}")
+        self.close3.setText("")
+        self.close3.setIcon(icon)
+        self.close3.setIconSize(QtCore.QSize(36, 37))
+        self.close3.setObjectName("close3")
+        self.label_31.raise_()
+        self.com6.raise_()
+        self.com7.raise_()
+        self.com1.raise_()
+        self.com5.raise_()
+        self.com3.raise_()
+        self.mini3.raise_()
+        self.date3.raise_()
+        self.frame_5.raise_()
+        self.com8.raise_()
+        self.com4.raise_()
+        self.com2.raise_()
+        self.close3.raise_()
+        self.label_28.raise_()
+        self.sub1.hide()
+        self.sub2.hide()
+        self.sub3.hide()
+        self.sub4.hide()
+        self.sub5.hide()
+        self.sub6.hide()
+        self.sub7.hide()
+        self.sub8.hide()
+        self.delete1.hide()
+        self.delete2.hide()
+        self.delete3.hide()
+        self.delete4.hide()
+        self.delete5.hide()
+        self.delete6.hide()
+        self.delete7.hide()
+        self.delete8.hide()
+        self.timer1.hide()
+        self.timer2.hide()
+        self.timer3.hide()
+        self.timer4.hide()
+        self.timer5.hide()
+        self.timer6.hide()
+        self.timer7.hide()
+        self.timer8.hide()
+        self.com1.hide()
+        self.com2.hide()
+        self.com3.hide()
+        self.com4.hide()
+        self.com5.hide()
+        self.com6.hide()
+        self.com7.hide()
+        self.com8.hide()
+        self.task1.hide()
+        self.task2.hide()
+        self.task3.hide()
+        self.task4.hide()
+        self.task5.hide()
+        self.task6.hide()
+        self.task7.hide()
+        self.task8.hide()
+        self.stackedWidget.addWidget(self.completed)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -1069,6 +1483,8 @@ class Ui_MainWindow(object):
         self.mini1.clicked.connect(MainWindow.showMinimized)
         self.close2.clicked.connect(MainWindow.close)
         self.mini2.clicked.connect(MainWindow.showMinimized)
+        self.close3.clicked.connect(MainWindow.close)
+        self.mini3.clicked.connect(MainWindow.showMinimized)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1079,7 +1495,7 @@ class Ui_MainWindow(object):
         self.nameuser.setText(_translate("MainWindow", "Amir Abbas Ataei"))
         self.myday1.setText(_translate("MainWindow", "     My Day                             "))
         self.label_2.setText(_translate("MainWindow", "|"))
-        self.myday1_2.setText(_translate("MainWindow", "    Important                             "))
+        self.comp1.setText(_translate("MainWindow", "    Completed                             "))
         self.myday1_3.setText(_translate("MainWindow", " Personal                             "))
         self.myday1_4.setText(_translate("MainWindow", "Setting                             "))
         self.label_7.setText(_translate("MainWindow", "My Day"))
@@ -1095,7 +1511,7 @@ class Ui_MainWindow(object):
         self.nameuser2.setText(_translate("MainWindow", "Amir Abbas Ataei"))
         self.myday1_9.setText(_translate("MainWindow", "     My Day                             "))
         self.label_35.setText(_translate("MainWindow", "|"))
-        self.myday1_10.setText(_translate("MainWindow", "    Important                             "))
+        self.comp2.setText(_translate("MainWindow", "    Completed                             "))
         self.myday1_11.setText(_translate("MainWindow", " Personal                             "))
         self.myday1_12.setText(_translate("MainWindow", "Setting                             "))
         self.date2.setText(_translate("MainWindow", "Thursday , September 9"))
@@ -1118,3 +1534,13 @@ class Ui_MainWindow(object):
         self.label_22.setText(_translate("MainWindow", "Task time"))
         self.ok_clock.setText(_translate("MainWindow", "Ok"))
         self.now_time.setText(_translate("MainWindow", "10 : 20 : 00"))
+        self.label_28.setText(_translate("MainWindow", "Completed"))
+        self.date3.setText(_translate("MainWindow", "Thursday , September 9"))
+        self.nameapp_4.setText(_translate("MainWindow", "To Do List"))
+        self.profile2_2.setText(_translate("MainWindow", "A"))
+        self.nameuser2_2.setText(_translate("MainWindow", "Amir Abbas Ataei"))
+        self.my_day3.setText(_translate("MainWindow", " My Day                             "))
+        self.label_40.setText(_translate("MainWindow", "|"))
+        self.myday1_14.setText(_translate("MainWindow", "          Completed                             "))
+        self.myday1_15.setText(_translate("MainWindow", " Personal                             "))
+        self.myday1_16.setText(_translate("MainWindow", "Setting                             "))
