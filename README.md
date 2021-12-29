@@ -1,3 +1,7 @@
+
+# Demo
+![GIF](images/demo.gif)
+
 # Todo List
 <code>+</code> Add task
 
